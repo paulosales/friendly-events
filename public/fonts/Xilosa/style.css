@@ -1,0 +1,13 @@
+/* font converted using font-converter.net. thank you! */
+@font-face {
+  font-family: "Xilosa";
+  src: url("./xilosa.eot"); /* IE9 Compat Modes */
+  src: url("./xilosa.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("./xilosa.otf") format("opentype"), /* Open Type Font */
+    url("./xilosa.svg") format("svg"), /* Legacy iOS */
+    url("./xilosa.ttf") format("truetype"), /* Safari, Android, iOS */
+    url("./xilosa.woff") format("woff"), /* Modern Browsers */
+    url("./xilosa.woff2") format("woff2"); /* Modern Browsers */
+  font-weight: normal;
+  font-style: normal;
+}

@@ -1,0 +1,32 @@
+[
+  {
+    "photo": "/images/performers/alex-islania.jpg",
+    "name": "Alex Amorim e Islânia Lopes",
+    "city": "Fortaleza, CE"
+  },
+  {
+    "photo": "/images/performers/cleweson-maria.jpg",
+    "name": "Cleweson Soneca e Maria Hercília",
+    "city": "João Pessoa, PB"
+  },
+  {
+    "photo": "/images/performers/ronnie-daiane.jpg",
+    "name": "Ronnie Von e Daiane Rodrigues",
+    "city": "Fortaleza, CE" 
+  },
+  {
+    "photo": "/images/performers/eder-soares.jpg",
+    "name": "Eder Soares",
+    "city": "Fortaleza, CE"
+  },
+  {
+    "photo": "/images/performers/edson-amsraine.jpg",
+    "name": "Edson Nobre e Amsraiane",
+    "city": "Fortaleza, CE"
+  },
+  {
+    "photo": "/images/performers/joelson-sher.jpg",
+    "name": "Joelson Albuquerque e Sher Oliveira",
+    "city": "Fortaleza, CE"
+  }
+]
