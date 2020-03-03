@@ -2,7 +2,7 @@ import React from 'react'
 import { PerformersContainer, PerformersTitle, PerformersContainerOverlay, Performer, PerformersContent, PerformerPhoto, PerformerName, PerformerCity, PerformerCityIcon, PerformerPhotoContainer } from './Styles'
 import { FormattedMessage } from 'react-intl'
 
-import performers from './performers.json'
+import performers from './performers-data'
 
 export default function Performers() {
   return (
