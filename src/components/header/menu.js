@@ -8,6 +8,10 @@ const menuItems = [
     messageId: "menu.events", defaultMessage: "Events"
   },
   {
+    anchor: "#contact", icon: "fa-map-marker-alt",
+    messageId: "menu.contact", defaultMessage: "Contact"
+  },
+  {
     anchor: "#performers", icon: "fa-users",
     messageId: "menu.performers", defaultMessage: "Performers"
   },
@@ -22,10 +26,6 @@ const menuItems = [
   {
     anchor: "#pricing", icon: "fa-dollar-sign",
     messageId: "menu.pricing", defaultMessage: "Pricing"
-  },
-  {
-    anchor: "#contact", icon: "fa-map-marker-alt",
-    messageId: "menu.contact", defaultMessage: "Contact"
   }
 ]
 
