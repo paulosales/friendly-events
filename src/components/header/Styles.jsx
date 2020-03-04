@@ -1,14 +1,20 @@
-import styled from "styled-components";
-import {PRIMARY, LIGHT, TRANSPARENT, WHITE} from '../theme'
+import styled from 'styled-components';
+import { PRIMARY, LIGHT, TRANSPARENT, WHITE } from '../theme';
 
 export const HeaderContainer = styled.section`
   width: 100%;
   position: fixed;
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   height: 77px;
   overflow: visible;
   z-index: 2;
+
+  transition: all 0.3s ease-in-out;
+
+  background-color: ${props => (props.highlighted ? LIGHT : TRANSPARENT)};
+  border: 1px solid ${props => (props.highlighted ? LIGHT : TRANSPARENT)};
 
   @media screen and (max-width: 767px) {
     flex-direction: column;
@@ -16,67 +22,63 @@ export const HeaderContainer = styled.section`
     overflow: hidden;
     position: relative;
     align-items: center;
+    background-color: ${WHITE};
   }
-`
+`;
 
 export const LogoContainer = styled.div`
-  background-color: ${props => (props.highlighted?LIGHT:TRANSPARENT)};
   transition: all 0.4s ease-in-out;
 
   @media screen and (max-width: 767px) {
     width: 95%;
     display: flex;
     justify-content: center;
-    background-color: ${WHITE};
   }
-`
+`;
 
 export const Logo = styled.img`
   width: 120px;
-`
+`;
 
 export const TopMenu = styled.nav`
-  width: 95%;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
   font-size: 16px;
   align-items: center;
-  
-  transition: all 0.3s ease-in-out;
 
-  background-color: ${props => (props.highlighted?LIGHT:TRANSPARENT)};
-  border: 1px solid ${props => (props.highlighted?LIGHT:TRANSPARENT)};
+  transition: all 0.3s ease-in-out;
 
   @media screen and (max-width: 767px) {
     flex-direction: column;
     justify-content: flex-start;
+    width: 95%;
     background-color: ${PRIMARY};
-    border: 1px solid ${PRIMARY};
-    height: ${props=>props.menuOpened?'auto':'50px'};
+    height: ${props => (props.menuOpened ? 'auto' : '50px')};
   }
-`
+`;
 
 export const MenuMobileHeader = styled.div`
   display: none;
   min-height: 50px;
   width: 95%;
+
+  transition: all 0.4s ease-in-out;
   @media screen and (max-width: 767px) {
     display: flex;
     justify-content: flex-end;
     align-items: center;
   }
-`
+`;
 
 export const MenuItemIcon = styled.i`
   @media screen and (max-width: 767px) {
     display: none;
   }
-  
-`
+`;
 
 export const MenuItem = styled.a`
-  font-family: "Xilosa";
+  font-family: 'Xilosa';
   font-size: 17pt;
   display: flex;
   flex-direction: column;
@@ -85,9 +87,10 @@ export const MenuItem = styled.a`
   height: 100%;
   padding-left: 15px;
   padding-right: 15px;
-  border-left: 1px solid ${props => (props.highlighted?"rgba(0, 0, 0, 0.1)":TRANSPARENT)};
+  border-left: 1px solid
+    ${props => (props.highlighted ? 'rgba(0, 0, 0, 0.1)' : TRANSPARENT)};
   word-wrap: break-word;
-  color: ${props => (props.highlighted? PRIMARY : LIGHT) };
+  color: ${props => (props.highlighted ? PRIMARY : LIGHT)};
   text-decoration: none;
 
   transition: all 0.4s ease-in-out;
@@ -116,7 +119,7 @@ export const MenuItem = styled.a`
 
   &:visited {
     text-decoration: none;
-    color: ${props => (props.highlighted? PRIMARY : LIGHT) };
+    color: ${props => (props.highlighted ? PRIMARY : LIGHT)};
     background-color: none;
 
     @media screen and (max-width: 767px) {
@@ -127,6 +130,6 @@ export const MenuItem = styled.a`
   &:hover {
     text-decoration: none;
     color: ${LIGHT};
-    background-color: ${ PRIMARY }
+    background-color: ${PRIMARY};
   }
-`
+`;

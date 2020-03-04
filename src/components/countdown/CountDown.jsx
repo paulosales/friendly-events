@@ -1,8 +1,8 @@
-import React from 'react'
-import styled from 'styled-components'
-import { FormattedMessage } from 'react-intl'
-import { PRIMARY, LIGHT, TRANSPARENT } from '../theme'
-import { formatDigits, useLiveCountDown } from '../../helpers/count-down'
+import React from 'react';
+import styled from 'styled-components';
+import { FormattedMessage } from 'react-intl';
+import { PRIMARY, LIGHT, TRANSPARENT } from '../theme';
+import { formatDigits, useLiveCountDown } from '../../helpers/count-down';
 
 const CountDownContainer = styled.div`
   width: 49%;
@@ -11,7 +11,7 @@ const CountDownContainer = styled.div`
   justify-content: flex-end;
   background-color: ${PRIMARY};
   color: ${LIGHT};
-  
+
   @media screen and (max-width: 424px) {
     height: 90px;
   }
@@ -20,7 +20,7 @@ const CountDownContainer = styled.div`
     justify-content: center;
     width: 100%;
   }
-`
+`;
 
 const Counter = styled.div`
   display: flex;
@@ -38,23 +38,23 @@ const Counter = styled.div`
   @media screen and (max-width: 424px) {
     min-width: 89px;
   }
-`
+`;
 
 const Digits = styled.span`
   display: block;
   font-size: 4.35em;
   margin: 0 auto;
   line-height: 0.85em;
-  color: #FFF;
+  color: #fff;
   text-align: center;
-  
+
   @media screen and (max-width: 424px) {
     font-size: 2.65em;
   }
   @media screen and (max-width: 1024px) and (min-width: 768px) {
-    font-size: 3.65em; 
+    font-size: 3.65em;
   }
-`
+`;
 
 const Unit = styled.strong`
   display: block;
@@ -69,7 +69,7 @@ const Unit = styled.strong`
     font-size: 1em;
     letter-spacing: 3px;
   }
-`
+`;
 
 export default function CountDown() {
   const targetDate = new Date(2020, 7, 14, 18, 0, 0);
@@ -81,27 +81,27 @@ export default function CountDown() {
       <Counter>
         <Digits>{formatDigits(timeleft.days)}</Digits>
         <Unit>
-          <FormattedMessage id="countdown.days" defaultMessage="DAYS"/>
+          <FormattedMessage id="countdown.days" defaultMessage="DAYS" />
         </Unit>
       </Counter>
       <Counter>
         <Digits>{formatDigits(timeleft.hours)}</Digits>
         <Unit>
-          <FormattedMessage id="countdown.hours" defaultMessage="HRS"/>
+          <FormattedMessage id="countdown.hours" defaultMessage="HRS" />
         </Unit>
       </Counter>
       <Counter>
         <Digits>{formatDigits(timeleft.minutes)}</Digits>
         <Unit>
-          <FormattedMessage id="countdown.minutes" defaultMessage="MIN"/>
+          <FormattedMessage id="countdown.minutes" defaultMessage="MIN" />
         </Unit>
       </Counter>
       <Counter>
         <Digits>{formatDigits(timeleft.seconds)}</Digits>
         <Unit>
-          <FormattedMessage id="countdown.seconds" defaultMessage="SEC"/>
+          <FormattedMessage id="countdown.seconds" defaultMessage="SEC" />
         </Unit>
       </Counter>
     </CountDownContainer>
-  )
+  );
 }
