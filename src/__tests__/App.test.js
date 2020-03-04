@@ -1,15 +1,18 @@
+/**
+* Copyright (c) 2020-present, Paulo Rogério Sales Santos - <paulosales@gmail.com>
+*
+* This source code is licensed under the MIT license found in the
+* LICENSE file in the root directory of this source tree.
+*/
+
 import React from 'react';
 import { render } from '@testing-library/react';
-import { IntlProvider } from 'react-intl';
 import App from '../App';
-import messages from '../intl/messages.json'
 
-test('renders learn react link', () => {
+test('renders start page with success', () => {
   const { getAllByText } = render(
-    <IntlProvider locale={"pt-BR"} messages={messages["pt-BR"]}>
-      <App />
-    </IntlProvider>
+    <App />
   );
-  const eletronicText = getAllByText(/Professores/i);
+  const eletronicText = getAllByText(/Performers/i);
   expect(eletronicText[0]).toBeInTheDocument();
 });
