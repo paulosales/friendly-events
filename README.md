@@ -11,5 +11,6 @@ A tool to easily promote events on the web.
 ![Mobile  view](images/mob-sample.gif)
 
 ## Frontend features
-* Int'l support; 🌎
-* Full responsiveness. 📱
+
+- Int'l support; 🌎
+- Full responsiveness. 📱
