@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "private": false,
   "license": "MIT",
+  "devDependencies": {
+    "cross-env": "^7.0.0"
+  },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.12.1",
     "@testing-library/dom": "^6.12.2",
@@ -10,6 +13,7 @@
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "bootstrap3": "^3.3.5",
+    "detect-browser-language": "^0.0.2",
     "infinite-react-carousel": "^1.2.9",
     "jquery": "^3.4.1",
     "leaflet": "^1.6.0",
@@ -24,7 +28,7 @@
     "typescript": "^3.7.5"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "cross-env HOST=0.0.0.0 react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "test:debug": "react-scripts --inspect-brk test --runInBand --no-cache",
