@@ -1,15 +1,15 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-import {SECONDARY} from '../theme'
+import { SECONDARY } from '../theme';
 
 export const SlideImage = styled.img`
   opacity: 0.7;
   height: 844px;
   width: 100%;
   object-fit: cover;
-`
+`;
 
-export const SlideCaption = styled.div`  
+export const SlideCaption = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -26,24 +26,24 @@ export const SlideCaption = styled.div`
 export const SlideCaptionContainer = styled.div`
   text-align: center;
   width: 80%;
-  border: 1px solid #FFF;
+  border: 1px solid #fff;
   padding: 0.5em;
   max-width: 950px;
 
   @media screen and (max-width: 900px) {
     margin-top: -200px;
   }
-`
+`;
 
 export const SlideCaptionBox = styled.div`
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
-  border: 1px solid #FFF;
+  border: 1px solid #fff;
   width: 100%;
   padding: 3em;
-`
+`;
 
 export const CaptionText = styled.h1`
   color: #fff;
@@ -55,17 +55,17 @@ export const CaptionText = styled.h1`
   @media screen and (max-width: 767px) {
     font-size: 3em;
   }
-`
+`;
 
 export const CaptionSubText = styled.span`
   font-size: 1.5em;
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 5px;
-  color: #FFF;
+  color: #fff;
   padding-top: 1em;
   margin-top: 1em;
   border-top-width: 2px;
   border-style: solid none none;
   border-color: ${SECONDARY};
-`
+`;

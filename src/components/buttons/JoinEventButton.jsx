@@ -1,6 +1,6 @@
-import React from 'react'
-import styled from "styled-components";
-import { LIGHT, SECONDARY, GRAY } from "../theme";
+import React from 'react';
+import styled from 'styled-components';
+import { LIGHT, SECONDARY, GRAY } from '../theme';
 import { FormattedMessage } from 'react-intl';
 import ButtonIcon from './ButtonIcon';
 
@@ -17,7 +17,9 @@ const Button = styled.a`
 
   transition: all 0.4s ease-in-out;
 
-  &:visited, &:active, &:focus {
+  &:visited,
+  &:active,
+  &:focus {
     background-color: ${SECONDARY};
     color: ${LIGHT};
     text-decoration: none;
@@ -32,19 +34,23 @@ const Button = styled.a`
   @media screen and (max-width: 424px) {
     height: 90px;
     font-size: 3.35em;
-  }  
+  }
 
   @media screen and (max-width: 900px) {
     width: 100%;
   }
-`
+`;
 
-const JoinEventButton = function () {
-  return (<Button href="https://www.eventbrite.com.br/e/arrocha-o-no-2020-tickets-92189231473" target="_new">
-    <ButtonIcon className="fa fa-ticket-alt"/>
-    <FormattedMessage id="event.join" defaultMessage="Join The Event"/>
-  </Button>)
-}
+const JoinEventButton = function() {
+  return (
+    <Button
+      href="https://www.eventbrite.com.br/e/arrocha-o-no-2020-tickets-92189231473"
+      target="_new"
+    >
+      <ButtonIcon className="fa fa-ticket-alt" />
+      <FormattedMessage id="event.join" defaultMessage="Join The Event" />
+    </Button>
+  );
+};
 
-
-export default JoinEventButton
+export default JoinEventButton;
