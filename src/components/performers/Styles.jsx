@@ -1,5 +1,11 @@
 import styled from 'styled-components';
-import { WHITE, TRANSPARENT_DARK, TRANSPARENT, SECONDARY } from '../theme';
+import {
+  WHITE,
+  TRANSPARENT_DARK,
+  TRANSPARENT,
+  SECONDARY,
+  DARK,
+} from '../theme';
 
 export const PerformersContainer = styled.section`
   background-image: url(/images/slide5.jpg);
@@ -31,21 +37,25 @@ export const PerformersContent = styled.div`
   align-items: baseline;
 `;
 
-export const Performer = styled.div`
+export const PerformerContainer = styled.div`
+  position: ${props => (props.fullScreen ? 'absolute' : 'relative')};
+  z-index: ${props => (props.fullScreen ? '2' : '0')};
+  width: ${props => (props.fullScreen ? '100%' : '370px')};
+  height: ${props => (props.fullScreen ? '100%' : 'auto')};
   margin-bottom: 20px;
   border: 10px solid transparent;
   transition: all 0.3s ease-in-out;
-
-  width: 370px;
+  background-color: ${props => (props.fullScreen ? DARK : 'none')};
 
   &:hover {
-    background-color: ${TRANSPARENT};
+    background-color: ${props => (props.fullScreen ? DARK : TRANSPARENT)};
   }
 `;
 
 export const PerformerPhotoContainer = styled.div`
   border: 10px solid #fff;
   position: relative;
+  display: inline-block;
 
   &::before {
     content: '\f0dd';
