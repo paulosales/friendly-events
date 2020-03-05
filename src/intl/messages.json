@@ -29,7 +29,10 @@
     "performers.from": "From {city}",
     "language.language": "Language",
     "event.date.value": "August, 14th, 15th and, 16th",
-    "contact.questions": "Questions?"
+    "contact.questions": "Questions?",
+    "contact.yourname": "Your name",
+    "contact.youremail": "Your e-mail",
+    "contact.yourphone": "Your phone"
   },
   "pt-BR": {
     "menu.home": "Inicio",
@@ -61,6 +64,9 @@
     "performers.from": "De {city}",
     "language.language": "Idioma",
     "event.date.value": "14, 15 e 16 de Agosto",
-    "contact.questions": "Dúvidas?"
+    "contact.questions": "Dúvidas?",
+    "contact.yourname": "Seu nome",
+    "contact.youremail": "Seu e-mail",
+    "contact.yourphone": "Seu telefone"
   }
 }
