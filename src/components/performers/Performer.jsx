@@ -8,7 +8,9 @@ import {
   PerformerPhoto,
   PerformerName,
   PerformerCity,
-  PerformerCityIcon,
+  PerformerResume,
+  ResumeInstagram,
+  PerformerIcon,
 } from './Styles';
 
 const Performer = function(props) {
@@ -26,13 +28,24 @@ const Performer = function(props) {
       </PerformerPhotoContainer>
       <PerformerName>{performer.name}</PerformerName>
       <PerformerCity>
-        <PerformerCityIcon className="fa fa-map-marker" />
+        <PerformerIcon className="fa fa-map-marker" />
         <FormattedMessage
           id="performers.from"
           values={{ city: performer.city }}
           defaultMessage={`From {city}`}
         />
       </PerformerCity>
+      {performer.instagrams.map(instagram => (
+        <ResumeInstagram
+          key={instagram}
+          href={`https://www.instagram.com/${instagram}`}
+          target="_blank"
+        >
+          <PerformerIcon className="fab fa-instagram" />
+          {instagram}
+        </ResumeInstagram>
+      ))}
+      <PerformerResume visible={fullScreen}>{performer.resume}</PerformerResume>
     </PerformerContainer>
   );
 };
@@ -42,6 +55,8 @@ Performer.propTypes = {
     photo: PropTypes.string,
     name: PropTypes.string,
     city: PropTypes.string,
+    resume: PropTypes.string,
+    instagrams: PropTypes.arrayOf(PropTypes.string),
   }),
 };
 
