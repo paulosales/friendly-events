@@ -38,10 +38,8 @@ export const PerformersContent = styled.div`
 `;
 
 export const PerformerContainer = styled.div`
-  position: ${props => (props.fullScreen ? 'absolute' : 'relative')};
-  z-index: ${props => (props.fullScreen ? '2' : '0')};
-  width: ${props => (props.fullScreen ? '100%' : '370px')};
-  height: ${props => (props.fullScreen ? '100%' : 'auto')};
+  width: 370px;
+  height: auto;
   margin-bottom: 20px;
   border: 10px solid transparent;
   transition: all 0.3s ease-in-out;
@@ -88,7 +86,29 @@ export const PerformerCity = styled.div`
   text-align: center;
 `;
 
-export const PerformerCityIcon = styled.i`
+export const PerformerIcon = styled.i`
   color: ${SECONDARY};
   margin-right: 10px;
+`;
+
+export const PerformerResume = styled.div`
+  color: ${WHITE};
+  font-size: 1.5em;
+  height: ${props => (props.visible ? 'auto' : '0px')};
+  opacity: ${props => (props.visible ? '1.0' : '0.0')};
+`;
+
+export const ResumeInstagram = styled.a`
+  color: ${WHITE};
+  font-size: 1.5em;
+  display: block;
+  text-align: center;
+
+  &:active {
+    color: ${WHITE};
+  }
+
+  &:focus {
+    color: ${WHITE};
+  }
 `;
