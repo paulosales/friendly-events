@@ -9,6 +9,7 @@
     }
   },
   "devDependencies": {
+    "@babel/helper-call-delegate": "^7.10.4",
     "cross-env": "^7.0.0"
   },
   "dependencies": {
